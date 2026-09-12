@@ -1,2 +1,2 @@
 def echo_number(number):
-    print("Thats the number you entered", number)
+    return (f"Thats the number you entered {number}")
