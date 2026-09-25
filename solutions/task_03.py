@@ -4,6 +4,3 @@ def is_divisor(a, b):
             return True
         else:
             return False
-    else:
-        return ("Impossible")
-

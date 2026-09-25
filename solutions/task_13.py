@@ -1,3 +1,5 @@
 def multiplication_table(n):
-    for k in range(1,10):
-        print(n, "x", k, "=", n*k)
+    table = []
+    for i in range(10):
+        table.append(f"{n} x {i+1} = {n*(i+1)}")
+    return table
