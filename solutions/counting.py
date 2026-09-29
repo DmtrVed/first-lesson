@@ -6,20 +6,16 @@ def factorial(n):
             otvet *= fact
             fact +=1
         return otvet
-    else:
-        return 0
+    else: return None
 def arrangements(n, k):
-    if n>=k and n>=0 and k>=0:
-        n1 = factorial(n)
-        nk = factorial(n-k)
-        return n1/nk
-    else:
-        return 0
+    if n<k or n<0 or k<0: return 0
+    n1 = factorial(n)
+    nk = factorial(n-k)
+    return n1/nk
 def combinations(n, k):
-    if n>=k and n>=0 and k>=0:
-        n1 = factorial(n)
-        k1 = factorial(k)
-        nk = factorial(n-k)
-        return n1/(k1*nk)
-    else:
-        return 0
+    if n<k or n<0 or k<0: return 0
+    n1 = factorial(n)
+    k1 = factorial(k)
+    nk = factorial(n-k)
+    return n1/(k1*nk)
+print(arrangements(-1, 2))
