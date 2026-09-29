@@ -19,15 +19,15 @@ def arrangements(n, k):
 
 def birthday_probability(people):
     return 1 - arrangements (365, people)/365 ** people
-def simulate_birthday(people, trials):
+def simulate_birthday(people, trials=10000):
+    if people > 365:
+        return 1.0
     if people <= 1:
         return 0.0
     cnt = 0
     for _ in range(trials):
-        birthdays = []
-        for _ in range(people):
-            birthdays.append(random.randint(1, 365))
+        birthdays = [random.randint(1, 365) for _ in range(people)]
         if len(birthdays) != len(set(birthdays)):
             cnt += 1
     return cnt / trials
-'''& "C:\temp\my_venv\Scripts\python.exe" -m pytest "D:\univer python\first-lesson\tests" -v'''
+
