@@ -18,7 +18,6 @@ def arrangements(n, k):
         return None
 
 def birthday_probability(people):
-    print(f"--- DEBUG: birthday_probability called with n={n}")
     if people > 365:
         return 1.0
     if people <= 1:
