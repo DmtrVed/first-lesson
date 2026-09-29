@@ -18,7 +18,15 @@ def arrangements(n, k):
         return None
 
 def birthday_probability(people):
-    return 1 - arrangements (365, people)/365 ** people
+    print(f"--- DEBUG: birthday_probability called with n={n}")
+    if people > 365:
+        return 1.0
+    if people <= 1:
+        return 0.0
+    prob_all_different = 1.0
+    for i in range(people):
+        prob_all_different *= (365 - i) / 365.0
+    return 1.0 - prob_all_different
 def simulate_birthday(people, trials=10000):
     if people > 365:
         return 1.0
