@@ -1,6 +1,6 @@
 def tetration(x, n):
-    step = 1
-    for i in range(n):
-        step = x ** step
-    return x
-print(tetration(2, 3))
+    result = 1
+    for _ in range(n):
+        result = x ** result
+    return result
+print(tetration(5, 2))
