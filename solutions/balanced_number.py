@@ -14,15 +14,16 @@ def is_balanced_number(n):
             n //=10
         for i in range(cnt//2-1):
             suml += n%10
+            n//=10
     elif cnt%2!=0:
-        for i in range(cnt//2-1):
+        for i in range(cnt//2):
             sumr += n%10
             n //=10
         n //=10
-        for i in range(cnt//2-1):
+        for i in range(cnt//2):
             suml += n%10
+            n//=10
     if suml==sumr:
         return "Balanced"
     if suml!=sumr:
         return "Not Balanced"
-print(is_balanced_number(56239814))
