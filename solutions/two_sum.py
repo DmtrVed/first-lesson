@@ -4,7 +4,7 @@ def two_sum_sorted(arr, target):
     while left < right:
         current_sum = arr[left] + arr[right]
         if current_sum == target:
-            return left, right
+            return left + 1, right + 1
         elif current_sum < target:
             left += 1 
         else:
