@@ -1,11 +1,10 @@
 def two_sum_sorted(arr, target):
-    print(f"DEBUG: arr={arr}, target={target}")
     left = 0
     right = len(arr) - 1
     while left < right:
         current_sum = arr[left] + arr[right]
         if current_sum == target:
-            return left + 1, right + 1
+            return (arr[left], arr[right])
         elif current_sum < target:
             left += 1 
         else:
