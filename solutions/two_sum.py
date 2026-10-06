@@ -1,4 +1,5 @@
 def two_sum_sorted(arr, target):
+    print(f"DEBUG: arr={arr}, target={target}")
     left = 0
     right = len(arr) - 1
     while left < right:
