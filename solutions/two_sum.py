@@ -1,8 +1,12 @@
 def two_sum_sorted(arr, target):
-    for j in range(len(arr)-1,0,-1):
-        for i in range(len(arr)-1):
-            if arr[i] + arr[j] == target:
-                return arr[i], arr[j]
-            else:
-                return None
-print(two_sum_sorted([1, 2, 3, 4, 5], 10))
+    left = 0
+    right = len(arr) - 1
+    while left < right:
+        current_sum = arr[left] + arr[right]
+        if current_sum == target:
+            return left, right
+        elif current_sum < target:
+            left += 1 
+        else:
+            right -= 1
+    return None
