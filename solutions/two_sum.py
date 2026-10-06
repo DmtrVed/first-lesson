@@ -3,4 +3,6 @@ def two_sum_sorted(arr, target):
         for i in range(len(arr)-1):
             if arr[i] + arr[j] == target:
                 return arr[i], arr[j]
-print(two_sum_sorted([1, 2, 3, 4, 5], 9))
+            else:
+                return None
+print(two_sum_sorted([1, 2, 3, 4, 5], 10))
